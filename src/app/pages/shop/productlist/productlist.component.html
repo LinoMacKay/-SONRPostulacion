@@ -1,0 +1,27 @@
+<div class="container-fluid">
+    <div class="left-container">
+        <img class="icon" src="assets/icons/badge-sell-3.png">
+        <img class="product-image" src="{{product.imgUrl}}" >
+
+    </div>
+    <div class="right-container">
+        
+            <p>
+                {{product.name}}
+            </p>
+            <p class="price">
+                <a>
+                {{product.priceWithTaxes | currency}}
+            </a>
+            {{product.priceWithOutTaxes  | currency}}
+            </p>
+            <p>
+                {{product.description}}
+            </p>
+            <button class="mat-elevation-z4"  [routerLink]="['/product-detail',product.SKU]">
+               ADD TO CART
+            </button>
+            
+       
+    </div>
+</div>

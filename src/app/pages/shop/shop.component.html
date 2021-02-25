@@ -1,1 +1,53 @@
-<p>shop works!</p>
+<div class="container-fluid">
+    <div class="container-grid">
+        <div class="top-row">
+            <mat-divider></mat-divider>
+            <div class="col-xl-6 view-items">
+                <button mat-button (click)="isList = true">
+                <mat-icon>list</mat-icon>
+            </button>
+            <button mat-button (click)="isList = false">
+                <mat-icon >apps</mat-icon>
+            </button>
+            </div>
+            <div class="col-xl-6 sort-items">
+
+            </div>
+            <mat-divider></mat-divider>
+        </div>
+        <div class="middle-row grid" *ngIf="!isList; else row">
+              
+                <div *ngFor="let product of products">
+                    <app-productcard [product]="product" ></app-productcard>
+                </div>
+        
+        </div>
+
+        <ng-template #row>
+            <div class="middle-row list" >
+              
+                <div *ngFor="let product of products">
+                    <app-productlist [product]="product" ></app-productlist>
+                </div>
+        
+        </div>
+        </ng-template>
+
+        <div class="final-row">
+            <mat-divider></mat-divider>
+            <div class="col-xl-6 view-items">
+                <button mat-button>
+                
+            </button>
+            <button mat-button>
+                
+
+            </button>
+            </div>
+            <div class="col-xl-6 sort-items">
+
+            </div>
+            <mat-divider></mat-divider>
+        </div>
+    </div>
+</div>

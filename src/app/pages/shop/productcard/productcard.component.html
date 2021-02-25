@@ -1,0 +1,29 @@
+<div class="card-container mat-elevation-z5">
+    <img class="icon" src="assets/icons/badge-sell-3.png">
+    <div class="top-content">
+        <img class="product-image" src="{{product.imgUrl}}" (mouseover)="buttonsavalible = true"   (mouseout)="buttonsavalible = false">
+    </div>
+    <div class="bottom-content">
+        <p>
+            {{product.name}}
+        </p>
+        <p class="price">
+            <a>
+            {{product.priceWithTaxes | currency}}
+        </a>
+        {{product.priceWithOutTaxes  | currency}}
+        </p>
+        <button class="mat-elevation-z4"  [routerLink]="['/product-detail',product.SKU]">
+           ADD TO CART
+        </button>
+        
+    </div>
+
+
+    <div class="middle" *ngIf="buttonsavalible">
+       <button ><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+       <button ><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+       <button ><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+    </div>
+
+</div>

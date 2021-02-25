@@ -12,6 +12,8 @@ import { CommonModule } from "@angular/common";
 import { ProductdetailComponent } from './pages/productdetail/productdetail.component';
 import { AvaiabilityPipe } from './pipes/avaiability.pipe';
 import { ShopComponent } from './pages/shop/shop.component';
+import { ProductcardComponent } from './pages/shop/productcard/productcard.component';
+import { ProductlistComponent } from './pages/shop/productlist/productlist.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ShopComponent } from './pages/shop/shop.component';
     ContactComponent,
     ProductdetailComponent,
     AvaiabilityPipe,
-    ShopComponent
+    ShopComponent,
+    ProductcardComponent,
+    ProductlistComponent
   ],
   imports: [
     BrowserModule,
