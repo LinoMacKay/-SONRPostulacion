@@ -1,20 +1,56 @@
 <div class="container-fluid">
     <div class="product-container">
-        <div class="col-sm-6 left-container">
-
-            <div class="col-sm-4 smallimage">
-                <div *ngFor="let product of products | slice:0:3;">
-                    <img class="product" src="{{product.imgUrl}}" (click)="UpdateImage(product.imgUrl)"> {{product.title}}
-                </div>
-                
-            </div>
-            <div class="col-sm-8 bigimage">
-                <img class="product" src="{{image}}" >
-            </div>            
-            
+        <div class="col-xl-4 left-container">
+        <div class=" main-image">
+            <img class="product" src="{{image}}" >
         </div>
-        <div class="col-sm-6 right-container">
+            
+        <div class=" second-images" >
+            <div *ngFor="let product of products | slice:0:3;">
+                <img class="product" src="{{product.imgUrl}}" (click)="UpdateImage(product.imgUrl)"> {{product.title}}
+            </div>
+        </div>
+            
+          
+        </div>
+        <div class="col-xl-8 right-container">
+            <div class="product-information">
+                <h3>{{product.name}}</h3>
+                <p class="price">{{product.priceWithTaxes | currency }}</p>
+                <p class="subtext"> Ex Tax: {{product.priceWithOutTaxes | currency}}</p>
+                <p class="subtext">Brand: <a>{{product.brand}}</a></p>
+                <p class="subtext">SKU: <a>{{product.SKU}}</a></p>
+                <p class="subtext">Availability: <a>{{product.Stock | avaiability}}</a></p>
+                <mat-divider></mat-divider>
 
+            </div>
+            
+            <div class="product-description">
+                <div class="description">
+                    <p class="subtext">{{product.description}}</p>
+                </div>
+                <div class="buy">
+
+                    <div class="input">
+                        
+                        <input type="number" [(ngModel)]="quantity">
+                        <div class="icons">
+                                <button (click)="quantity = quantity + 1" >+</button>
+                                <button (click)="quantity = quantity - 1">-</button>
+                        </div>
+                    </div>
+                    
+                    <div class="buttons">
+                        <button class="compare mat-elevation-z10">
+                            ADD TO COMPARE
+                        </button>
+                        <button class="addtocart mat-elevation-z10">
+                            ADD TO CART
+                        </button>
+                    </div>
+                
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -10,6 +10,8 @@ import { BottombarComponent } from './pages/bottombar/bottombar.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { CommonModule } from "@angular/common";
 import { ProductdetailComponent } from './pages/productdetail/productdetail.component';
+import { AvaiabilityPipe } from './pipes/avaiability.pipe';
+import { ShopComponent } from './pages/shop/shop.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ProductdetailComponent } from './pages/productdetail/productdetail.comp
     AppbarComponent,
     BottombarComponent,
     ContactComponent,
-    ProductdetailComponent
+    ProductdetailComponent,
+    AvaiabilityPipe,
+    ShopComponent
   ],
   imports: [
     BrowserModule,

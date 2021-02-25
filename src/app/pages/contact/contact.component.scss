@@ -84,13 +84,17 @@
 
 
 h3{
-    font-size: calc(1vw + 1vh);
+    font-size: 25px;
     font-family: 'Prata', serif;
 }
 p{
-    font-size: calc(0.5vw + 0.5vh);
+    font-size: 17px;
     width: 100%;
     font-family: 'Rubik', sans-serif;
+    word-break: normal;
+    a{
+        font-weight: normal;
+    }
 }
 
 @media screen and (max-width:550px){

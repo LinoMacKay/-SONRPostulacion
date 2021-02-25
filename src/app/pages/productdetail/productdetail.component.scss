@@ -1,56 +1,175 @@
+$productPrice : #b3936d;
+$itemcolor: #999999;
 .container-fluid{
     width: 100%;
-    height: 90vh;
+    height: 85vh;
     display: flex;
     align-items: center;
     padding: 5% 10% 5% 10%;
+    margin-bottom: 10%;
     justify-content: center;
 }
 .product-container{
     width: 100%;
-    height: 100%;
+    height: 80%;
     display: flex;
+    align-items: flex-start;
+    justify-content:flex-start;
+
+    
 }
 
 .left-container{
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-
-    .bigimage{
-        height: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0;
+    min-width: 200px;
+    padding: 0;
+    flex-direction: column;
+    .main-image{
         width: 100%;
-        padding: 5% 0 5% 2%;
+        height: 80%;
         .product{
             width: 100%;
-
-            height:100%;
-        }
-    }
-
-    .smallimage{
-        height: 100%;
-        width: 100%;
-        padding: 5% 0% 5% ;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: space-evenly;
-        .product{
-            width: 100%;
-           
-
-            border: 1px solid;
             height: 100%;
         }
     }
-   
+    .second-images{
+        width:100%;
+        height: 20%;
+        display: flex;
+        .product{
+            width: 100%;
+
+            
+            height: 100%;
+        }
+        .product:hover{
+            border: 1px solid;
+            border-color:      #555555;
+        }
+    }
     
 }
+
 .right-container{
-    background-color: blue;
-    
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+    min-width: 300px;
+   
+
+    .product-information{
+        width: 100%;
+        height: auto;
+        display: flex;
+        padding: 5% 0 0 5%;
+        flex-direction: column;
+    }
+    .product-description{
+
+        width: 100%;
+        height: 100%;
+        padding: 5% 0 0 5%;
+        .buy {
+            display: flex;
+            flex-direction: column;
+
+            .buttons{
+                display: flex;
+                
+            }
+            .input{
+                display: flex;
+                margin-bottom: 10px;
+                input{
+                    width: 250px;
+                    border-radius: 5px;
+                    border: 0.5px solid;
+                    height: 50px;
+                    text-align: center;
+                }
+                .icons{
+                    
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    margin-left: 10px;
+                    button{
+                        width: 20px;
+                        height: 20px;
+                        display: flex;
+                        align-items: center;
+                        background-color: #28323c;
+                        justify-content: center;
+                        color:white
+                    }
+                }
+            }
+        }
+        .compare{
+            background-color: white;
+        }
+        .addtocart{
+            margin-left: 20px;
+            background-color: $productPrice;
+        }
+    }
+}
+mat-divider{ 
+    position:relative;
+    width: 100%;
+    border-top-color: $itemcolor;
 }
 
 
+h3{
+    font-size: 30px;
+    font-family: 'Rubik', sans-serif;
+    margin-bottom: 30px;
+};
+
+p{
+    font-size: 20px;
+    width: 100%;
+    font-family: 'Rubik', sans-serif;
+    margin-bottom: 20px;
+    a{
+        color:$productPrice;
+
+    }
+}
+
+p.price{
+    color:$productPrice;
+    font-weight: 500;
+}
+
+p.subtext{
+    font-weight: 400;
+    font-size: 19px;
+}
+
+
+button {
+    width: 150px;
+    border: 1px solid;
+    border-color: #999999;
+    height: 60px;
+    font-family: 'Rubik', sans-serif;
+    border-radius: 5px;
+}
+
+@media screen and (max-width:800px){
+    .product-container{
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .container-fluid{
+        width: 100%;
+        height: auto;
+    }
+}

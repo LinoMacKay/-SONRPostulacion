@@ -12,6 +12,7 @@ export class ProductdetailComponent implements OnInit {
 
   products:Array<Product>;
   image:String;
+  quantity:number = 0;
   constructor(private productService:ProductService,private route: ActivatedRoute) { }
   product:Product;
   ngOnInit(): void {
