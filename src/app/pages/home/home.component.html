@@ -1,21 +1,21 @@
 <div class="container-fluid">
     <div class="main-carousel">
-      <carousel [cellWidth]="'100%'" [height]="1200" [loop]=true [autoplay]=false  >
-        <div class="carousel-cell" style="background-image: url('assets/carousel/slider-1.jpg');" >
+      <carousel class="carousel" [cellWidth]="'100%'" [height]="1200" [loop]=true [autoplay]=false  >
+        <div class="carousel-cell main" style="background-image: url('assets/carousel/slider-1.jpg');" >
                 <h3>Best Choice For Restaurant, Cafe And More...</h3>
                 <h2>Original Coffe</h2>
                 <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, </p>
                 <p>  anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima.</p>
                 <button>DISCOVER NOW</button>
         </div>
-        <div class="carousel-cell" style="background-image: url('assets/carousel/slider-2.jpg');" >
-            <h3>Best Choice For Restaurant, Cafe And More...</h3>
+        <div class="carousel-cell main" style="background-image: url('assets/carousel/slider-2.jpg');" >
+            <h3>Best Choice For Restaurant, Cafe And Mor...</h3>
             <h2>Belly Coffe</h2>
             <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, </p>
             <p>  anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima.</p>
             <button>DISCOVER NOW</button>
     </div>
-    <div class="carousel-cell" style="background-image: url('assets/carousel/slider-3.jpg');" >
+    <div class="carousel-cell main" style="background-image: url('assets/carousel/slider-3.jpg');" >
             <h3>Best Choice For Restaurant, Cafe And More...</h3>
             <h2>Coffe Paper Cup</h2>
             <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, </p>
@@ -47,5 +47,18 @@
         </carousel>
              
         
+    </div>
+    <div class="reviews">
+        <carousel class="carousel" [height]="400"  [cellWidth]="'100%'"   [margin]="300">
+            <div class="carousel-cell"  *ngFor="let review of reviews" >
+                <h4>What Clients Say?</h4>
+                <p class="review">{{review.review}}</p>
+                <div class="reviewer">
+                    <img src="{{review.customerImgUrl}}">
+                    <p class="name">{{review.customerName}}
+                    </p>
+                </div>
+            </div>
+        </carousel>
     </div>
     </div>

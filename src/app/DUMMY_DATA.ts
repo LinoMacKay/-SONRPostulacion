@@ -1,5 +1,6 @@
 import { Product } from "./model/product";
 import { ProductCategory } from "./model/productCategory";
+import { Review } from "./model/review";
 
 
 export var Categories : Array<ProductCategory>=[ {id:1,name:"Type1"} ,{id:2,name:"Type2"} ,{id:3,name:"Type3"} ];
@@ -55,3 +56,7 @@ export const Products :  Array<Product> = [{
     priceWithOutTaxes:320,
     categoryId:1
  },]
+
+ export var Reviews:Array<Review> = [{review:'"'+"When a beautiful design is combined with powerful technology, it truly is an artwork. I love how my website operates and looks with this theme. Thank you for the awesome product. " +  '"...',customerName:"MEGDALENA VALENCIA",customerImgUrl:"assets/clients/client-img-1.jpg" },
+ {review:'"'+"When a beautiful design is combined with powerful technology, it truly is an artwork. I love how my website operates and looks with this theme. Thank you for the awesome product. " +  '"...',customerName:"VALERIA PEREZ",customerImgUrl:"assets/clients/client-img-2.jpg" },
+ {review:'"'+"When a beautiful design is combined with powerful technology, it truly is an artwork. I love how my website operates and looks with this theme. Thank you for the awesome product." +  '"..',customerName:"JOSE MARCOS",customerImgUrl:"assets/clients/client-img-3.jpg" },]

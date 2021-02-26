@@ -1,6 +1,8 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
 import { Product } from 'src/app/model/product';
+import { Review } from 'src/app/model/review';
 import { ProductService } from 'src/app/service/product.service';
+import { ReviewService } from 'src/app/service/review.service';
 
 @Component({
   selector: 'app-home',
@@ -13,10 +15,11 @@ import { ProductService } from 'src/app/service/product.service';
 export class HomeComponent implements OnInit {
   width:number = window.innerWidth;
   cellToShow:number;
-  constructor( private productService:ProductService) { }
+  constructor( private productService:ProductService,private reviewService:ReviewService) { }
   products:Product[];
+  reviews:Review[];
   ngOnInit(): void {
-  
+    
     if(this.width < 1250 && this.width > 850){
       console.log("1250")
       this.cellToShow = 2;
@@ -31,7 +34,7 @@ export class HomeComponent implements OnInit {
 
     }
     this.products = this.productService.getAllProducts();
-
+    this.reviews = this.reviewService.getAllReviews();
   }
 
   onWindowResize(event) {
