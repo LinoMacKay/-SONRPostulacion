@@ -50,7 +50,7 @@
         <button class="btn" data-toggle="dropdown">
           <mat-icon>add_shopping_cart</mat-icon>
         </button>
-        <div class="dropdown-menu checkout">
+        <div class="dropdown-menu checkout" [ngStyle]="{'opacity': 1}"> 
           <app-checkoutcard></app-checkoutcard>
 
       </div>
@@ -92,7 +92,7 @@
             <button class="btn" data-toggle="dropdown">
               <mat-icon>add_shopping_cart</mat-icon>
             </button>
-            <div class="dropdown-menu checkout">
+            <div class="dropdown-menu checkout" [ngStyle]="{'opacity': 1}">
               <app-checkoutcard></app-checkoutcard>
     
           </div>
