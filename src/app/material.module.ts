@@ -17,7 +17,7 @@ import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
   ],
   exports: [
     MatIconModule,
@@ -34,6 +34,7 @@ import {MatTableModule} from '@angular/material/table';
     MatInputModule,
     ReactiveFormsModule,
     MatTableModule
+    
   ]
 })
 export class CustomMaterialModule { }

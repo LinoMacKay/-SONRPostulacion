@@ -17,7 +17,7 @@
         </div>
         <div class="middle-row grid" *ngIf="!isList; else row">
               
-                <div *ngFor="let product of products">
+                <div class="product" *ngFor="let product of products">
                     <app-productcard [product]="product" ></app-productcard>
                 </div>
         

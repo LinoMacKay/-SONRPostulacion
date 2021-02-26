@@ -1,0 +1,23 @@
+<div class="checkoutcard-container">
+    <div class="checkout-product" *ngFor="let order of Orders">
+        <div class="product-image">
+            <img src="{{order.product.imgUrl}}">
+        </div>
+        <div class="product-description">
+            <h2>{{order.product.name}}</h2>
+            <p>Qty: {{order.quantity}}</p>
+            <h3>{{order.product.priceWithOutTaxes | currency}}</h3>
+        </div>
+    </div>
+
+    <hr class="solid">
+
+    <div class="checkout-total">
+        <p >Sub-total:   <a> {{subtotal | currency}}</a> </p>
+        <p>Total:   <a> {{total | currency}}</a> </p>
+        <hr class="solid">
+        <button mat-button [routerLink]="['/checkout']">VIEW CART</button>
+    </div>
+    
+
+</div>

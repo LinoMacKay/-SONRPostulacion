@@ -1,0 +1,51 @@
+<div class="container-fluid">
+    <div class="main-carousel">
+      <carousel [cellWidth]="'100%'" [height]="1200" [loop]=true [autoplay]=false  >
+        <div class="carousel-cell" style="background-image: url('assets/carousel/slider-1.jpg');" >
+                <h3>Best Choice For Restaurant, Cafe And More...</h3>
+                <h2>Original Coffe</h2>
+                <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, </p>
+                <p>  anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima.</p>
+                <button>DISCOVER NOW</button>
+        </div>
+        <div class="carousel-cell" style="background-image: url('assets/carousel/slider-2.jpg');" >
+            <h3>Best Choice For Restaurant, Cafe And More...</h3>
+            <h2>Belly Coffe</h2>
+            <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, </p>
+            <p>  anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima.</p>
+            <button>DISCOVER NOW</button>
+    </div>
+    <div class="carousel-cell" style="background-image: url('assets/carousel/slider-3.jpg');" >
+            <h3>Best Choice For Restaurant, Cafe And More...</h3>
+            <h2>Coffe Paper Cup</h2>
+            <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, </p>
+            <p>  anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima.</p>
+            <button>DISCOVER NOW</button>
+    </div>
+    
+        
+      </carousel>
+    </div>
+    <div class="main-welcome">
+            <h2>Welcome to Belly</h2>
+            <h3>Who Are The Best</h3>
+            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et</p>
+            <p>accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait.</p>
+            <div class="image">
+                <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming.</p>
+                <img src="assets/welcome-image.jpg">
+            </div>
+        </div>
+    <div class="recent-product">
+        <h3>Recent Product</h3>
+        <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram anteposuerit litterarum.</p>
+        <img class="separator" src="assets/separators/section-title-sep--3.png">
+        <carousel class="carousel"  [height]="800"  [cellsToShow]="cellToShow" [cellWidth]="'100%'"  [margin]="0">
+            <div class="carousel-cell"  *ngFor="let product of products" >
+                <app-productcard [product]="product"></app-productcard>
+            </div>
+        </carousel>
+             
+        
+    </div>
+    </div>

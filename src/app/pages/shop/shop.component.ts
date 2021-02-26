@@ -12,7 +12,7 @@ export class ShopComponent implements OnInit {
   grid:boolean=true;
   constructor(private productService:ProductService) { }
   products:Product[];
-  isList : boolean = true;
+  isList : boolean = false;
   ngOnInit(): void {
     this.products = this.productService.getAllProducts();
   }

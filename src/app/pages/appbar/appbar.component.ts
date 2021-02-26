@@ -6,11 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./appbar.component.scss'],
   host: {
     "(window:resize)":"onWindowResize($event)",
+    "(window:scroll)":"onWindowScroll($event)"
   }
 })
 export class AppbarComponent implements OnInit {
 
-
+  opacitylevel = 1;
+  positiontype = 'relative';
   isMobile: boolean = false;
   isMidMobile:boolean=false;
   width:number = window.innerWidth;
@@ -23,6 +25,23 @@ export class AppbarComponent implements OnInit {
       this.isMobile=true;
     }
   }
+
+
+  onWindowScroll() {
+
+    const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    if (number > 100) {
+      this.opacitylevel = 0.7;
+      this.positiontype = 'fixed'
+    }
+    else{
+      this.opacitylevel =1
+      this.positiontype = 'relative'
+
+    }
+
+  }
+
 
 
   onWindowResize(event) {

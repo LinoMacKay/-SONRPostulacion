@@ -1,6 +1,8 @@
 <div class="card-container mat-elevation-z5">
-    <img class="icon" src="assets/icons/badge-sell-3.png">
     <div class="top-content">
+        <div class="icon">
+            <img class="icon-image" src="assets/icons/badge-sell-3.png">
+        </div>
         <img class="product-image" src="{{product.imgUrl}}" (mouseover)="buttonsavalible = true"   (mouseout)="buttonsavalible = false">
     </div>
     <div class="bottom-content">
@@ -20,10 +22,5 @@
     </div>
 
 
-    <div class="middle" *ngIf="buttonsavalible">
-       <button ><i class="fa fa-heart-o" aria-hidden="true"></i></button>
-       <button ><i class="fa fa-heart-o" aria-hidden="true"></i></button>
-       <button ><i class="fa fa-heart-o" aria-hidden="true"></i></button>
-    </div>
-
+  
 </div>

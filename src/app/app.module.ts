@@ -15,6 +15,10 @@ import { ShopComponent } from './pages/shop/shop.component';
 import { ProductcardComponent } from './pages/shop/productcard/productcard.component';
 import { ProductlistComponent } from './pages/shop/productlist/productlist.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
+import { HomeComponent } from './pages/home/home.component';
+import {IvyCarouselModule} from 'angular-responsive-carousel';
+import { CheckoutcardComponent } from './pages/checkout/checkoutcard/checkoutcard.component';
+
 
 @NgModule({
   declarations: [
@@ -27,13 +31,18 @@ import { CheckoutComponent } from './pages/checkout/checkout.component';
     ShopComponent,
     ProductcardComponent,
     ProductlistComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    HomeComponent,
+    CheckoutcardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    CustomMaterialModule
+    CustomMaterialModule,
+    IvyCarouselModule
+    
+    
     
   ],
   providers: [],

@@ -18,11 +18,19 @@
         height: 60px;
     }
 }
+
+
+
+
+.mat-table {
+    overflow-x: scroll;
+  }
+
 .table{
     height: auto;
     width: 100%;
     table{
-        overflow-x: scroll;
+        
         border-collapse: collapse;
         width: 100%;
         position: relative;
