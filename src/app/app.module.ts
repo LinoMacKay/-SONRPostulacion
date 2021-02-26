@@ -14,6 +14,7 @@ import { AvaiabilityPipe } from './pipes/avaiability.pipe';
 import { ShopComponent } from './pages/shop/shop.component';
 import { ProductcardComponent } from './pages/shop/productcard/productcard.component';
 import { ProductlistComponent } from './pages/shop/productlist/productlist.component';
+import { CheckoutComponent } from './pages/checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -25,13 +26,14 @@ import { ProductlistComponent } from './pages/shop/productlist/productlist.compo
     AvaiabilityPipe,
     ShopComponent,
     ProductcardComponent,
-    ProductlistComponent
+    ProductlistComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    CustomMaterialModule,
+    CustomMaterialModule
     
   ],
   providers: [],

@@ -33,7 +33,7 @@
 
                     <div class="input">
                         
-                        <input type="number" [(ngModel)]="quantity">
+                        <input type="number" [(ngModel)]="quantity" min=0>
                         <div class="icons">
                                 <button (click)="quantity = quantity + 1" >+</button>
                                 <button (click)="quantity = quantity - 1">-</button>
@@ -44,7 +44,7 @@
                         <button class="compare mat-elevation-z10">
                             ADD TO COMPARE
                         </button>
-                        <button class="addtocart mat-elevation-z10">
+                        <button mat-button class="btn addtocart mat-elevation-z10" (click)="AddToCart()" >
                             ADD TO CART
                         </button>
                     </div>
