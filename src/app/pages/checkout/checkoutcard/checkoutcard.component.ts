@@ -9,11 +9,12 @@ import { OrderService } from 'src/app/service/order.service';
 })
 export class CheckoutcardComponent implements OnInit {
 
-  Orders:Array<Order>;
+  Orders:Array<Order> = new Array<Order>();
   constructor(private orderService:OrderService) { }
   subtotal:number = 0;
   total:number ;
   ngOnInit(): void {
+    console.log(this.Orders.length)
     this.Orders = this.orderService.getAllOrders();
     this.GetSubtotal(this.Orders);
   }
